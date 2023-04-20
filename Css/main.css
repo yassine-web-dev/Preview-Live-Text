@@ -1,0 +1,141 @@
+/* Start Global Rules */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+/* End Global Rules */
+
+/* Start Framework */
+
+.container {
+    margin: auto;
+    width: 1200px;
+}
+
+.barlow-font {
+    font-family: Barlow Condensed Medium;
+}
+
+.monts-font {
+    font-family: Montserrat Alternates;
+}
+
+.float-l {
+    float: left;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.position-rel {
+    position: relative;
+}
+
+.position-ab {
+    position: absolute;
+}
+
+.spanee {
+    top: 22px;
+    right: 15px;
+    font-size: 20px;
+}
+
+.eb-font {
+    font-family: EB Garamond;
+}
+
+@font-face {
+    font-family: Barlow Condensed Medium;
+    src: url('../Font/BarlowCondensed-Medium.otf');
+}
+
+@font-face {
+    font-family: Montserrat Alternates;
+    src: url('../Font/MontserratAlternates-Regular.otf');
+}
+
+@font-face {
+    font-family: EB Garamond;
+    src: url('../Font/EBGaramond-Italic-VariableFont_wght.ttf');
+}
+
+/* End Framework */
+
+/* Start Text Live Preview */
+
+.text-live-preview {
+    background-color: 	rgb(128, 128, 128, .5);
+    min-height: 100vh;
+}
+
+.text-live-preview .intro {
+    padding: 60px 0 30px;
+}
+
+.text-live-preview .intro h1 {
+    font-size: 60px;
+    margin: 0;
+}
+
+.text-live-preview .intro p {
+    font-size: 25px;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.text-live-preview .preview-service {
+    padding: 40px 0;
+}
+
+.text-live-preview .preview-service .write-text {
+    width: 47%;
+    margin-right: 6%;
+}
+
+.text-live-preview .preview-service .preview-text {
+    width: 47%;
+}
+
+.text-live-preview .preview-service form {
+    height: 467px;
+}
+
+.text-live-preview .preview-service .write-text #text,
+.text-live-preview .preview-service .preview-text #preview {
+    background: transparent;
+    border: 1px solid #000;
+    width: 100%;
+    height: 400px;
+    outline: none;
+    font-size: 20px;
+    padding: 20px 60px 0 20px;
+}
+
+.text-live-preview .preview-service .preview-text #preview {
+    padding: 20px;
+    line-height: 1.6;
+    letter-spacing: 4px;
+}
+
+.text-live-preview .preview-service .write-text button {
+    background: transparent;
+    padding: 10px 38px;
+    font-size: 20px;
+    border: 1px solid #000;
+    margin-top: 20px;
+}
+
+/* End Text Live Preview */
