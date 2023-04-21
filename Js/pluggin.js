@@ -51,3 +51,23 @@ function addLivePreview(inputElement, previewElement) {
 }
 
 addLivePreview(myTextArea, myPrevArea);
+
+
+/* Type Writer Effect On Text */
+var myP 	= document.getElementById('editor'),
+	myText 	= myP.getAttribute('data-type'),
+	i = 0;
+
+// Define SetInterval()
+var textWriter = setInterval(() => {
+
+	myP.textContent += myText[i];
+
+	i++; // i = i + 1  // i += 1  //They All The Same
+
+	// Clear SetInterval() On Condition
+	if (i > myText.length -  1) {
+		clearInterval(textWriter);
+	}
+
+}, 100);
