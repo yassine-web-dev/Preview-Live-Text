@@ -2,48 +2,39 @@
 
 
 /* Calculate Textarea Characters */
-var mySpan        = document.getElementById('myspan'),
-    myTextArea    = document.getElementById('text'),
-    myPrevArea    = document.getElementById('preview'),
-    desirableNum  = 100;
+var mySpan        	= document.getElementById('myspan'),
+    myTextArea    	= document.getElementById('text'),
+    myPrevArea    	= document.getElementById('preview'),
+    maxLength 		= myTextArea.getAttribute('maxlength');
 
-// Calculate Text Area
-myTextArea.onkeyup = function () {
+
+myTextArea.oninput = function () {
 
 	'use strict';
 
-	mySpan.textContent = desirableNum - this.value.length;
+	mySpan.textContent = maxLength - this.value.length;
 
 }
 
-myTextArea.addEventListener("input", function() {
-
-  if (myTextArea.value.length > desirableNum) {
-
-    myTextArea.value = myTextArea.value.substring(0, desirableNum);
-
-  }
-  
-});
-
-// Let Span keeps The Calculated Value
 window.onload = function () {
 
 	'use strict';
 
-	mySpan.textContent   = desirableNum - myTextArea.value.length;
+	// Clear Textarea Onload
+	myTextArea.value = '';
 
 }
 
 // Make The Preview Area Readonly
 myPrevArea.readOnly = true;
 
+
 /* Edit Text Live On Text */
 function addLivePreview(inputElement, previewElement) {
 
 	'use strict';
 
-	inputElement.addEventListener('keyup', function (event) {
+	inputElement.addEventListener('input', function (event) {
 
 		previewElement.textContent = event.target.value;
 
