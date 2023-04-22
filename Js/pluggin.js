@@ -62,3 +62,17 @@ var textWriter = setInterval(() => {
 	}
 
 }, 100);
+
+/* Capitalize Words Function */
+function capitalizeWords(myText) {
+
+	return myText.replace(/\b\w/g, function(l) {
+
+		 return l.toUpperCase() 
+
+		});
+	
+}
+
+var capitalizedStr = capitalizeWords(myText);
+myText = capitalizedStr;
