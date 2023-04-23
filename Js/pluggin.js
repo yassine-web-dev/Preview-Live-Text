@@ -7,12 +7,16 @@ var mySpan        	= document.getElementById('myspan'),
     myPrevArea    	= document.getElementById('preview'),
     maxLength 		= myTextArea.getAttribute('maxlength');
 
+//mySpan.textContent = localStorage.getItem('spanValue');
 
 myTextArea.oninput = function () {
 
 	'use strict';
 
 	mySpan.textContent = maxLength - this.value.length;
+
+	// Add Data To Local Storage
+	//localStorage.setItem('spanValue', mySpan.textContent);
 
 }
 
@@ -27,6 +31,8 @@ window.onload = function () {
 
 // Make The Preview Area Readonly
 myPrevArea.readOnly = true;
+
+//console.log(localStorage.getItem('spanValue'));
 
 
 /* Edit Text Live On Text */
